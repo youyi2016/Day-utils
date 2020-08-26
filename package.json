@@ -2,9 +2,11 @@
   "name": "days-util",
   "version": "1.0.0",
   "description": "汇集日常常用方法/逻辑，提升开发效率",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/babel lib --out-dir dist", // 将源码编译到dist文件夹，入口文件也要改成dist/index.js
+    "prepublish": "npm run compile" // npm publish之前会prepublish
   },
   "repository": {
     "type": "git",
